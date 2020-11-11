@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+// import ButtonItem from './component/ButtonItem';
+import TaskWrapper from './component/TaskWrapper';
+import TaskItem from './component/TaskItem';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component{
+  constructor(props: any) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <TaskWrapper>
+          <TaskItem title="DS" date="2020 11.11" text="がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！がんばれ！" />
+        </TaskWrapper>
+      </div>
+    );
+  }
 }
-
-export default App;
