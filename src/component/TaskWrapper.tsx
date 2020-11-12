@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
-const useStyles = makeStyles({
-  root: {
-    padding: '1vw',
-  }
-})
+const useStyles = makeStyles((theme: Theme) => createStyles({
+    root: {
+      padding: '1vw',
+      display: "flex",
+      flexWrap: "wrap",
+    }
+  })
+)
 
 const TaskWrapper = (props: any) => {
   const classes = useStyles();
